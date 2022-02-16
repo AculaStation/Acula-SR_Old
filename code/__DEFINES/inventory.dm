@@ -62,6 +62,7 @@
 #define ITEM_SLOT_LEGCUFFED (1<<19)
 
 //SKYRAT EDIT ADDITION BEGIN - ERP UPDATE
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /// Penis slot
 #define ITEM_SLOT_PENIS (1<<20)
 /// Vagina slot
@@ -71,11 +72,12 @@
 /// Nipples slot
 #define ITEM_SLOT_NIPPLES (1<<23)
 //SKYRATE EDIT ADDITION END
+*/ //ACULASTATION EDIT END
 
 /// Total amount of slots
 //SKYRAT EDIT CHANGE BEGIN
 // #define SLOTS_AMT 20 // Keep this up to date! - SKYRAT EDIT - ORIGINAL
-#define SLOTS_AMT 24 // Keep this up to date!
+#define SLOTS_AMT 20 // Keep this up to date! - ACULASTATION EDIT - REVERT TO 20 FROM 24
 //SKYRAT EDIT CHANGE END
 
 //SLOT GROUP HELPERS

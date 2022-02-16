@@ -20,7 +20,7 @@
 	else
 		usr.hud_used.inventory_shown = TRUE
 		usr.client.screen += targetmob.hud_used.toggleable_inventory
-
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 	if(usr.hud_used.inventory_shown && targetmob.hud_used)
 		for (var/atom/movable/screen/human/using in targetmob.hud_used.static_inventory)
@@ -51,6 +51,7 @@
 			if(inv.screen_loc == ui_penis)
 				inv.screen_loc = ui_penis_down
 	//SKYRAT EDIT ADDITION END
+	*/ //ACULASTATION EDIT END
 
 	targetmob.hud_used.hidden_inventory_update(usr)
 
@@ -234,6 +235,7 @@
 	static_inventory += using
 
 	//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	using = new /atom/movable/screen/human/erp_toggle()
 	using.icon = ui_style
 	using.screen_loc = ui_erp_inventory
@@ -243,6 +245,7 @@
 		using.invisibility = 100
 	static_inventory += using
 	//SKYRAT EDIT ADDITION END
+	*/ //ACULASTATION EDIT END
 
 	using = new /atom/movable/screen/human/equip()
 	using.icon = ui_style
@@ -305,6 +308,7 @@
 	inv_box.hud = src
 	static_inventory += inv_box
 
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "vagina"
@@ -342,6 +346,7 @@
 	inv_box.hud = src
 	erp_toggleable_inventory += inv_box
 	//SKYRAT EDIT ADDITION END
+	*/ //ACULASTATION EDIT END
 
 	throw_icon = new /atom/movable/screen/throw_catch()
 	throw_icon.icon = ui_style
@@ -473,6 +478,7 @@
 		if(H.wear_neck) screenmob.client.screen -= H.wear_neck
 		if(H.head) screenmob.client.screen -= H.head
 
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 	if(screenmob.hud_used.ERP_inventory_shown && screenmob.hud_used.hud_shown && H.client.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 		if(H.vagina)
@@ -506,7 +512,7 @@
 		if(H.nipples) screenmob.client.screen -= H.nipples
 		if(H.penis) screenmob.client.screen -= H.penis
 	//SKYRAT EDIT ADDITION END
-
+	*/ //ACULASTATION EDIT END
 
 
 /datum/hud/human/persistent_inventory_update(mob/viewer)
@@ -537,7 +543,7 @@
 			if(H.r_store)
 				H.r_store.screen_loc = ui_storage2
 				screenmob.client.screen += H.r_store
-
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 			if(H.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 				if(H.vagina)
@@ -553,7 +559,7 @@
 					H.penis.screen_loc = ui_penis
 					screenmob.client.screen += H.penis
 			//SKYRAT EDIT ADDITION END
-
+			*/ //ACULASTATION EDIT END
 		else
 			if(H.s_store)
 				screenmob.client.screen -= H.s_store
@@ -567,7 +573,7 @@
 				screenmob.client.screen -= H.l_store
 			if(H.r_store)
 				screenmob.client.screen -= H.r_store
-
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 			if(H.vagina)
 				screenmob.client.screen -= H.vagina
@@ -578,7 +584,7 @@
 			if(H.penis)
 				screenmob.client.screen -= H.penis
 			//SKYRAT EDIT ADDITION END
-
+			*/ //ACULASTATION EDIT END
 	if(hud_version != HUD_STYLE_NOHUD)
 		for(var/obj/item/I in H.held_items)
 			I.screen_loc = ui_hand_position(H.get_held_index_of_item(I))

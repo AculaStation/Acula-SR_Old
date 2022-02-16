@@ -1,3 +1,4 @@
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/sprite_accessory/genital
 	special_render_case = TRUE
 	var/associated_organ_slot
@@ -298,3 +299,4 @@
 /datum/sprite_accessory/genital/breasts/sextuple
 	icon_state = "sextuple"
 	name = "Sextuple"
+*/ //ACULASTATION EDIT END

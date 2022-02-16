@@ -477,6 +477,7 @@
 	//SKYRAT EDIT ADDITION END
 
 	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	for(var/genital in list("penis", "testicles", "vagina", "breasts", "anus"))
 		if(dna.species.mutant_bodyparts[genital])
 			var/datum/sprite_accessory/genital/G = GLOB.sprite_accessories[genital][dna.species.mutant_bodyparts[genital][MUTANT_INDEX_NAME]]
@@ -484,6 +485,7 @@
 				if(!(G.is_hidden(src)))
 					. += "<span class='notice'>[t_He] has exposed genitals... <a href='?src=[REF(src)];lookup_info=genitals'>Look closer...</a></span>"
 					break
+	*/ //ACULASTATION EDIT END
 
 	var/flavor_text_link
 	/// The first 1-FLAVOR_PREVIEW_LIMIT characters in the mob's "flavor_text" DNA feature. FLAVOR_PREVIEW_LIMIT is defined in flavor_defines.dm.
@@ -498,10 +500,12 @@
 	if (flavor_text_link)
 		. += flavor_text_link
 
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	if(client)
 		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
 		if(erp_status_pref && erp_status_pref != "disabled")
 			. += span_notice("ERP STATUS: [erp_status_pref]")
+	*/ //ACULASTATION EDIT END
 
 	//Temporary flavor text addition:
 	if(temporary_flavor_text)

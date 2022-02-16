@@ -49,6 +49,7 @@
 	var/ooc_notes = ""
 
 	//  Handle OOC notes first
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	if(preferences && preferences.read_preference(/datum/preference/toggle/master_erp_preferences))
 		var/e_prefs = preferences.read_preference(/datum/preference/choiced/erp_status)
 		var/e_prefs_nc = preferences.read_preference(/datum/preference/choiced/erp_status_nc)
@@ -59,6 +60,7 @@
 		ooc_notes += "Vore: [e_prefs_v]\n"
 		ooc_notes += "ERP Mechanics: [e_prefs_mechanical]\n"
 		ooc_notes += "\n"
+	*/ //ACULASTATION EDIT END
 
 	// Now we handle silicon and/or human, order doesn't really matter
 	// If other variants of mob/living need to be handled at some point, put them here

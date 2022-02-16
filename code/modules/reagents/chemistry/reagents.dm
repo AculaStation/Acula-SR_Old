@@ -227,6 +227,7 @@ Primarily used in reagents/reaction_agents
 /// Called when an overdose starts
 /datum/reagent/proc/overdose_start(mob/living/M)
 	///SKYRAT EDIT ADDITION: Because these chemicals shouldn't bear the same weight as normal / debatably more harmful chemicals.
+	/*//ACULASTATION EDIT START - HORNY REMOVAL
 	if(name == "dopamine")///This one also shouldn't have any negative mood effect.
 		return
 	if(name == "succubus milk" || name == "incubus draft" || name == "Camphor" || name == "Pentacamphor")
@@ -234,6 +235,7 @@ Primarily used in reagents/reaction_agents
 		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/minor_overdose, name)
 		return
 	///SKYRAT EDIT END
+	*/ //ACULASTATION EDIT END
 	to_chat(M, span_userdanger("You feel like you took too much of [name]!"))
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/overdose, name)
 	return

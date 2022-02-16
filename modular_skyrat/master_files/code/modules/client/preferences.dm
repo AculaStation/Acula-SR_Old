@@ -29,7 +29,7 @@
 
 	var/needs_update = TRUE
 
-	var/arousal_preview = AROUSAL_NONE
+	//var/arousal_preview = AROUSAL_NONE //ACULASTATION EDIT - HORNY REMOVAL
 
 	var/datum/species/pref_species
 
