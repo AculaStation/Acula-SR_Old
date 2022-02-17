@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 	restricted_roles = list(JOB_CAPTAIN)
 
 /datum/loadout_item/neck/kinkycollar
-	name = "Kinky collar"
+	name = "Innocuous collar"
 	item_path = /obj/item/clothing/neck/kink_collar
 
 //Donator neck items here
