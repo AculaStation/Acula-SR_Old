@@ -270,9 +270,9 @@
 			"You hear a slap.")
 			target.dna?.species?.stop_wagging_tail(target)
 			return
-/* //ACULASTATION EDIT START - ASS SLAPPING BE GONE
 	//SKYRAT EDIT ADDITION BEGIN - EMOTES
 	if(zone_selected == BODY_ZONE_PRECISE_GROIN && target.dir == src.dir)
+		/*
 		if(HAS_TRAIT(target, TRAIT_PERSONALSPACE) && (target.stat != UNCONSCIOUS) && (!target.handcuffed)) //You need to be conscious and uncuffed to use Personal Space
 			if(target.combat_mode && (!HAS_TRAIT(target, TRAIT_PACIFISM))) //Being pacified prevents violent counters
 				var/obj/item/bodypart/affecting = src.get_bodypart(BODY_ZONE_HEAD)
@@ -299,8 +299,9 @@
 				"You hear a slap.", ignored_mobs = list(target))
 			to_chat(target, "<span class='danger'>[src] slaps your ass!")
 			return
+			*/
+		return
 	//SKYRAT EDIT END
-	*/ //ACULASTATION EDIT END
 	do_attack_animation(target, ATTACK_EFFECT_DISARM)
 	playsound(target, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
 	if (ishuman(target))
