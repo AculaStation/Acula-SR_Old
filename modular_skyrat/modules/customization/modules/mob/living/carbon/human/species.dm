@@ -461,7 +461,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 /datum/species/proc/handle_body(mob/living/carbon/human/species_human)
 	species_human.remove_overlay(BODY_LAYER)
 
-	var/list/standing = list()
+	var/list/standing = list("foo")
 
 	var/obj/item/bodypart/head/HD = species_human.get_bodypart(BODY_ZONE_HEAD)
 
