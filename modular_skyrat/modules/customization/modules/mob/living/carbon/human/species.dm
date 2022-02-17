@@ -2,8 +2,10 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species
 	mutant_bodyparts = list()
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	///Self explanatory
 	var/can_have_genitals = TRUE
+	*/ //ACULASTATION EDIT END
 	///Override of icon file of which we're taking the icons from for our limbs
 	var/limbs_icon
 	///A list of actual body markings on the owner of the species. Associative lists with keys named by limbs defines, pointing to a list with names and colors for the marking to be rendered. This is also stored in the DNA
@@ -281,7 +283,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/list/default_mutant_bodyparts = list()
 	/// List of all the languages our species can learn NO MATTER their background
 	var/list/learnable_languages = list(/datum/language/common)
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/species/New()
 	. = ..()
 	if(can_have_genitals)
@@ -291,7 +293,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 		default_mutant_bodyparts["breasts"] = "None"
 		default_mutant_bodyparts["anus"] = "None"
 		default_mutant_bodyparts["penis"] = "None"
-
+*/ //ACULASTATION EDIT END
 /datum/species/dullahan
 	mutant_bodyparts = list()
 
@@ -320,13 +322,13 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species/plasmaman
 	mutant_bodyparts = list()
-	can_have_genitals = FALSE
+	//can_have_genitals = FALSE //ACULASTATION EDIT START - HORNY REMOVAL
 	can_augment = FALSE
 	learnable_languages = list(/datum/language/common, /datum/language/calcic)
 
 /datum/species/ethereal
 	mutant_bodyparts = list()
-	can_have_genitals = FALSE
+	//can_have_genitals = FALSE //ACULASTATION EDIT START - HORNY REMOVAL
 	can_augment = FALSE
 	learnable_languages = list(/datum/language/common, /datum/language/voltaic)
 
