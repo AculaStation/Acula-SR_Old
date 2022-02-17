@@ -36,6 +36,7 @@
 		/obj/item/canvas/twentythree_nineteen = 5,
 		/obj/item/canvas/twentythree_twentythree = 5,
 		/obj/item/paint_palette = 3
+		/obj/item/pillow = 48 //ACULASTATION EDIT - PILLOWS
 	)
 	//SKYRAT EDIT: Adds Ceramic, Glassblowing, and Fishing Skillchips
 	contraband = list(
