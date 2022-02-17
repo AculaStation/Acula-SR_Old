@@ -42,3 +42,7 @@
 /obj/item/clothing/sextoy/Initialize(mapload)
 	..()
 	addtimer(CALLBACK(src, .proc/qdel), 5 SECONDS)
+
+/obj/item/clothing/mask/leatherwhip/Initialize(mapload)
+	..()
+	addtimer(CALLBACK(src, .proc/qdel), 5 SECONDS)
