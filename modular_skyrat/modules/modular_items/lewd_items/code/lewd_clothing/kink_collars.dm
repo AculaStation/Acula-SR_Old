@@ -27,7 +27,7 @@
 //Here goes code for normal collar
 
 /obj/item/clothing/neck/kink_collar
-	name = "collar"
+	name = "collar" //ACULASTATION EDIT - HORNY REMOVAL
 	desc = "A nice, tight collar. It fits snug to your skin"
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_neck.dmi'
 	worn_icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_neck.dmi'
@@ -175,7 +175,7 @@
 //It's 2:56 of 08.04.2021, i want to sleep. Please laugh.
 
 /obj/item/key/kink_collar
-	name = "collar key"
+	name = "collar key" //ACULASTATION EDIT - HORNY BAD
 	desc = "A key for a tiny lock on a collar or bag."
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_items/lewd_items.dmi'
 	icon_state = "collar_key"
