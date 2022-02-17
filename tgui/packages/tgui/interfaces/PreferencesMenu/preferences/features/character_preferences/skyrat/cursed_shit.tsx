@@ -1,5 +1,5 @@
 import { FeatureDropdownInput, Feature, FeatureNumberInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureNumeric, FeatureToggle, FeatureChoiced } from "../../base";
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 export const penis_toggle: FeatureToggle = {
   name: "Penis",
   component: CheckboxInput,
@@ -134,12 +134,12 @@ export const feature_anus: Feature<string> = {
   name: "Anus Choice",
   component: FeatureDropdownInput,
 };
-
+*/ //ACULASTATION EDIT END
 export const body_size: FeatureNumeric = {
   name: "Body Size",
   component: FeatureNumberInput,
 };
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 export const erp_status_pref: FeatureChoiced = {
   name: "ERP Status",
   component: FeatureDropdownInput,
@@ -160,3 +160,4 @@ export const erp_status_pref_mechanics: FeatureChoiced = {
   component: FeatureDropdownInput,
 };
 
+*/ //ACULASTATION EDIT END
