@@ -1,3 +1,7 @@
+/*
+
+// ACULASTATION EDIT START - HORNY REMOVAL
+
 import { CheckboxInput, FeatureDropdownInput, FeatureChoiced, FeatureToggle } from "../../base";
 
 export const master_erp_pref: FeatureToggle = {
@@ -76,3 +80,7 @@ export const erp_sexuality_pref: FeatureChoiced = {
   description: "Determines what sexual content you see, limited use. None will show all content.",
   component: FeatureDropdownInput,
 };
+
+*/
+
+// ACULASTATION EDIT END
