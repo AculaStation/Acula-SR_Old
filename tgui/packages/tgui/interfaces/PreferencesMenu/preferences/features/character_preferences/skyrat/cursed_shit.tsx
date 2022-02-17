@@ -2,7 +2,7 @@ import { FeatureNumberInput, FeatureNumeric } from "../../base";
 
 /*
 
-//ACULASTATION EDIT START - HORNY REMOVAL
+// ACULASTATION EDIT START - HORNY REMOVAL
 export const penis_toggle: FeatureToggle = {
   name: "Penis",
   component: CheckboxInput,
@@ -139,7 +139,7 @@ export const feature_anus: Feature<string> = {
 };
 */
 
-//ACULASTATION EDIT END
+// ACULASTATION EDIT END
 
 export const body_size: FeatureNumeric = {
   name: "Body Size",
@@ -147,7 +147,7 @@ export const body_size: FeatureNumeric = {
 };
 /*
 
-//ACULASTATION EDIT START - HORNY REMOVAL
+// ACULASTATION EDIT START - HORNY REMOVAL
 
 export const erp_status_pref: FeatureChoiced = {
   name: "ERP Status",
@@ -171,4 +171,4 @@ export const erp_status_pref_mechanics: FeatureChoiced = {
 
 */
 
-//ACULASTATION EDIT END
+// ACULASTATION EDIT END
