@@ -551,11 +551,11 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 /datum/loadout_item/head/blfed
 	name = "Black Fedora"
 	item_path = /obj/item/clothing/head/fedora/fedblack
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/loadout_item/head/dominacap
 	name = "Dominant cap"
 	item_path = /obj/item/clothing/head/domina_cap
-
+*/ //ACULASTATION EDIT END
 /datum/loadout_item/head/fashionable_cap
 	name = "Fashionable baseball cap"
 	item_path = /obj/item/clothing/head/soft/yankee

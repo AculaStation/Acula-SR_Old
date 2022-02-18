@@ -152,9 +152,11 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	pull_icon = null
 
 	QDEL_LIST(toggleable_inventory)
+	/* //ACULASTATION EDIT START - HORNY REMOVAL
 	//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 	QDEL_LIST(erp_toggleable_inventory) // Destroy ERP stuff
 	//SKYRAT EDIT ADDITION END
+	*/
 	QDEL_LIST(hotkeybuttons)
 	throw_icon = null
 	QDEL_LIST(infodisplay)
@@ -212,10 +214,12 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen += static_inventory
 			if(toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.inventory_shown)
 				screenmob.client.screen += toggleable_inventory
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 			if(erp_toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.ERP_inventory_shown && screenmob.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 				screenmob.client.screen += erp_toggleable_inventory
 			//SKYRAT EDIT ADDITION END
+			*/ //ACULASTATION EDIT END
 			if(hotkeybuttons.len && !hotkey_ui_hidden)
 				screenmob.client.screen += hotkeybuttons
 			if(infodisplay.len)
@@ -232,10 +236,12 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
 				screenmob.client.screen -= toggleable_inventory
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 			if(erp_toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.ERP_inventory_shown && screenmob.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 				screenmob.client.screen -= erp_toggleable_inventory
 			//SKYRAT EDIT ADDITION END
+			*/ //ACULASTATION EDIT END
 			if(hotkeybuttons.len)
 				screenmob.client.screen -= hotkeybuttons
 			if(infodisplay.len)
@@ -256,10 +262,12 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
 				screenmob.client.screen -= toggleable_inventory
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 			if(toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.ERP_inventory_shown && screenmob.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 				screenmob.client.screen -= erp_toggleable_inventory
 			//SKYRAT EDIT ADDITION END
+			*/ //ACULASTATION EDIT END
 			if(hotkeybuttons.len)
 				screenmob.client.screen -= hotkeybuttons
 			if(infodisplay.len)
@@ -323,7 +331,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	hide_actions_toggle.InitialiseIcon(src)
 
 //SKYRAT EDIT - ADDITION - ERP ICONS FIX
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/hud/proc/update_erp_ui_style(new_erp_ui_style)
 	// do nothing if overridden by a subtype or already on that style
 	if (initial(erp_ui_style) || erp_ui_style == new_erp_ui_style)
@@ -337,7 +345,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	hide_actions_toggle.InitialiseIcon(src)
 
 //SKYRAT EDIT - ADDITION - ERP ICONS FIX - END
-
+*/ //ACULASTATION EDIT END
 //Triggered when F12 is pressed (Unless someone changed something in the DMF)
 /mob/verb/button_pressed_F12()
 	set name = "F12"

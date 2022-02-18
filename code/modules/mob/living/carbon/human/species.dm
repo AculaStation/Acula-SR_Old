@@ -1240,6 +1240,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				return TRUE
 			return FALSE
 
+		/* //ACULASTATION EDIT START - HORNY REMOVAL
 		//SKYRAT EDIT ADDITION BEGIN - ERP_SLOT_SYSTEM
 		if(ITEM_SLOT_VAGINA)
 			if(H.is_bottomless())
@@ -1263,6 +1264,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				return FALSE
 			return FALSE
 		//SKYRAT EDIT ADDITION END
+		*/ //ACULASTATION EDIT END
 
 	return FALSE //Unsupported slot
 

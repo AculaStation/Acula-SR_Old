@@ -1,5 +1,5 @@
 // 200 dollars is 200 dollars :(
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/preference/toggle/penis
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -388,7 +388,7 @@
 
 /datum/preference/numeric/breasts_size/create_default_value()
 	return 4
-
+*/ //ACULASTATION EDIT END
 /datum/preference/numeric/body_size
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -406,7 +406,7 @@
 
 /datum/preference/numeric/body_size/create_default_value()
 	return BODY_SIZE_NORMAL
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/preference/toggle/anus
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -447,3 +447,4 @@
 	var/datum/sprite_accessory/genital/anus/none/default = /datum/sprite_accessory/genital/anus/none
 	return initial(default.name)
 
+*/ //ACULASTATION EDIT END

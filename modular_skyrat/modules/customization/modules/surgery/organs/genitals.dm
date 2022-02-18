@@ -1,3 +1,4 @@
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /obj/item/organ/genital
 	color = "#fcccb3"
 	organ_flags = ORGAN_EDIBLE | ORGAN_NO_DISMEMBERMENT
@@ -410,3 +411,5 @@
 			picked_organ.update_sprite_suffix()
 			update_body()
 	return
+
+*/ //ACULASTATION EDIT END

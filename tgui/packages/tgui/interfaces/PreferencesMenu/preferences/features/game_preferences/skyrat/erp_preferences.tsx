@@ -1,3 +1,7 @@
+/*
+
+// ACULASTATION EDIT START - HORNY REMOVAL
+
 import { CheckboxInput, FeatureDropdownInput, FeatureChoiced, FeatureToggle } from "../../base";
 
 export const master_erp_pref: FeatureToggle = {
@@ -24,14 +28,14 @@ export const cum_face_pref: FeatureToggle = {
 export const aphro_pref: FeatureToggle = {
   name: "Aphrodisiacs",
   category: "ERP",
-  description: "Toggles whether you wish to recieve the effects of aphrodisiacs",
+  description: "",
   component: CheckboxInput,
 };
 
 export const noncon_pref: FeatureToggle = {
   name: "Obsessed Non-con Target",
   category: "ERP",
-  description: "Toggles whether you wish to be an obsessed target for those with the trait.",
+  description: "",
   component: CheckboxInput,
 };
 
@@ -45,14 +49,14 @@ export const sextoy_pref: FeatureToggle = {
 export const breast_enlargement_pref: FeatureToggle = {
   name: "Breast enlargement",
   category: "ERP",
-  description: "Determines if you wish to recieve the effects of breast enlargement chemicals.",
+  description: "",
   component: CheckboxInput,
 };
 
 export const penis_enlargement_pref: FeatureToggle = {
   name: "Penis enlargement",
   category: "ERP",
-  description: "Determines if you wish to recieve the effects of penis enlargement chemicals.",
+  description: "",
   component: CheckboxInput,
 };
 
@@ -66,13 +70,17 @@ export const gender_change_pref: FeatureToggle = {
 export const autocum_pref: FeatureToggle = {
   name: "Autocum",
   category: "ERP",
-  description: "Toggles whether you automatically cum using the arousal system, or if you need to do it manually.",
+  description: "",
   component: CheckboxInput,
 };
 
 export const erp_sexuality_pref: FeatureChoiced = {
   name: "Sexuality Preference",
   category: "ERP",
-  description: "Determines what sexual content you see, limited use. None will show all content.",
+  description: "",
   component: FeatureDropdownInput,
 };
+
+*/
+
+// ACULASTATION EDIT END

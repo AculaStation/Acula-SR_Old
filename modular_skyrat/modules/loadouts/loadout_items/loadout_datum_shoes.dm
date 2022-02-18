@@ -169,11 +169,11 @@ GLOBAL_LIST_INIT(loadout_shoes, generate_loadout_items(/datum/loadout_item/shoes
 /datum/loadout_item/shoes/disco
 	name = "Green Snakeskin Shoes"
 	item_path = /obj/item/clothing/shoes/discoshoes
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/loadout_item/shoes/dominaheels
 	name = "Dominant heels"
 	item_path = /obj/item/clothing/shoes/dominaheels
-
+*/ //ACULASTATION EDIT END
 // Job Restricted
 /datum/loadout_item/shoes/jester
 	name = "Jester shoes"

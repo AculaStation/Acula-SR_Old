@@ -359,7 +359,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "swimming_blue"
 	gender = FEMALE
 	use_static = TRUE
-
+/* //ACULASTATION EDIT START
 /datum/sprite_accessory/underwear/thong
 	name = "Thong"
 	icon_state = "thong"
@@ -380,12 +380,12 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	name = "Chastity Cage"
 	icon_state = "chastcage"
 	use_static = null
-
+*/ //ACULASTATION EDIT END
 /datum/sprite_accessory/underwear/lizared
 	name = "LIZARED Underwear"
 	icon_state = "lizared"
 	use_static = TRUE
-	
+
 /datum/sprite_accessory/underwear/digibriefs
 	name = "Digi Briefs"
 	icon_state = "briefs_d"
@@ -580,7 +580,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "tubetop"
 	gender = FEMALE
 	use_static = null
-
+/* //ACULASTATION EDIT START - HORNY BE GONE
 /datum/sprite_accessory/undershirt/chastbra
 	name = "Chastity Bra"
 	icon_state = "chastbra"
@@ -610,7 +610,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "shibari_sleeves"
 	gender = FEMALE
 	use_static = null
-
+*/ //ACULASTATION EDIT END
 /datum/sprite_accessory/undershirt/bulletclub //4 life
 	name = "Shirt - Black Skull"
 	icon_state = "shirt_bc"

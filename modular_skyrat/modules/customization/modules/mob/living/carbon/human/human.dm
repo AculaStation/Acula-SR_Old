@@ -3,6 +3,7 @@
 
 	if(href_list["lookup_info"])
 		switch(href_list["lookup_info"])
+			/* //ACULASTATION EDIT START - HORNY REMOVAL
 			if("genitals")
 				var/list/line = list()
 				for(var/genital in list("penis", "testicles", "vagina", "breasts", "anus"))
@@ -19,6 +20,7 @@
 					line += ORG.get_description_string(G)
 				if(length(line))
 					to_chat(usr, span_notice("[jointext(line, "\n")]"))
+			*/ //ACULASTATION EDIT END
 			if("open_examine_panel")
 				tgui.holder = src
 				tgui.ui_interact(usr) //datum has a tgui component, here we open the window
@@ -49,7 +51,7 @@
 
 /mob/living/carbon/human/species/teshari
 	race = /datum/species/teshari
-
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /mob/living/carbon/human/verb/toggle_undies()
 	set category = "IC"
 	set name = "Toggle underwear visibility"
@@ -79,7 +81,7 @@
 				underwear_visibility = UNDERWEAR_HIDE_UNDIES | UNDERWEAR_HIDE_SHIRT | UNDERWEAR_HIDE_SOCKS
 		update_body()
 	return
-
+*/ //ACULASTATION EDIT END
 /mob/living/carbon/human/revive(full_heal = 0, admin_revive = 0)
 	if(..())
 		if(dna && dna.species)
