@@ -32,6 +32,7 @@
 		/datum/reagent/potassium,
 		/datum/reagent/uranium/radium,
 		/datum/reagent/silicon,
+		/datum/reagent/silver, //ACULASTATION EDIT: Readds silver to the chem synthesizer.
 		/datum/reagent/sodium,
 		/datum/reagent/stable_plasma,
 		/datum/reagent/consumable/sugar,
