@@ -1,8 +1,9 @@
 /atom/movable/screen/skyrat_logo
-	name = "Skyrat Station"
-//	icon = 'modular_skyrat/modules/lobby_cam/icons/skyrat_logo.dmi' // Acula edit, use our logo instead :)
+//	name = "Skyrat Station"  // Acula edit, use our logo instead :)
+//	icon = 'modular_skyrat/modules/lobby_cam/icons/skyrat_logo.dmi'
 //	icon_state = "skyrat_logo"
-icon = 'z__modular_aculastation/modules/lobby_logo/acula_logo.dmi'
+	name = "Acula Station"
+	icon = 'z__modular_aculastation/modules/lobby_logo/acula_logo.dmi'
 	icon_state = "acula_logo"
 	screen_loc = "1:16,1:16"
 	plane = SKYRAT_LOGO
