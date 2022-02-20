@@ -5,8 +5,8 @@
 //	icon_state = "skyrat_logo"
 	name = "Acula Station"
 	icon = 'z__modular_aculastation/modules/lobby_logo/acula_logo.dmi'
-/// ACULASTATION EDIT END
 	icon_state = "acula_logo"
+/// ACULASTATION EDIT END
 	screen_loc = "1:16,1:16"
 	plane = SKYRAT_LOGO
 	alpha = 0
