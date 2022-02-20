@@ -1,5 +1,5 @@
 /atom/movable/screen/skyrat_logo
-//	name = "Skyrat Station"  // Acula edit, use our logo instead :)
+//	name = "Skyrat Station"  // ACULASTATION EDIT:, use our logo instead :)
 //	icon = 'modular_skyrat/modules/lobby_cam/icons/skyrat_logo.dmi'
 //	icon_state = "skyrat_logo"
 	name = "Acula Station"
