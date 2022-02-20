@@ -18,6 +18,7 @@ GLOBAL_LIST(veteran_players)
 	rustg_file_write(veteran_list, VETERANPLAYERS)
 
 /proc/is_veteran_player(client/user)
+	/* //ACULASTATION EDIT START
 	if(isnull(user))
 		return FALSE
 	if(GLOB.veteran_players[user.ckey])
@@ -25,5 +26,8 @@ GLOBAL_LIST(veteran_players)
 	if(check_rights(R_ADMIN, FALSE))
 		return TRUE
 	return FALSE
+	*/
+	return TRUE
+	//ACULASTATION EDIT END
 
 #undef VETERANPLAYERS
