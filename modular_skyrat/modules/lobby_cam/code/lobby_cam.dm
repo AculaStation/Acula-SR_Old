@@ -4,7 +4,7 @@
 //	icon = 'modular_skyrat/modules/lobby_cam/icons/skyrat_logo.dmi'
 //	icon_state = "skyrat_logo"
 	name = "Acula Station"
-	icon = 'z__modular_aculastation/modules/acula_logo/acula_logo-x128.dmi'
+	icon = 'z__modular_aculastation/modules/acula_logo/logo.dmi'
 	icon_state = "acula_logo-x128"
 /// ACULASTATION EDIT END
 	screen_loc = "1:16,1:16"
