@@ -429,6 +429,7 @@ Difficulty: Hard
 		set_stat(CONSCIOUS) // deathgasp won't run if dead, stupid
 		..(force_grant = stored_nearby)
 
+/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 /mob/living/simple_animal/hostile/megafauna/hierophant/devour(mob/living/L)
 	for(var/obj/item/W in L)
 		if(!L.dropItemToGround(W))
@@ -437,6 +438,7 @@ Difficulty: Hard
 	visible_message(span_hierophant_warning("[src] annihilates [L]!"),span_userdanger("You annihilate [L], restoring your health!"))
 	adjustHealth(-L.maxHealth*0.5)
 	L.dust()
+*/ //ACULASTATION EDIT END
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/CanAttack(atom/the_target)
 	. = ..()
@@ -470,8 +472,10 @@ Difficulty: Hard
 					burst_range = 3
 					INVOKE_ASYNC(src, .proc/burst, get_turf(src), 0.25) //melee attacks on living mobs cause it to release a fast burst if on cooldown
 				OpenFire()
+			/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 			else
 				devour(L)
+			*/ //ACULASTATION EDIT END
 		else
 			return ..()
 

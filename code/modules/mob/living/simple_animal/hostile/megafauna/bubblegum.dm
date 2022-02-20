@@ -214,6 +214,7 @@ Difficulty: Hard
 		new /obj/effect/temp_visual/bubblegum_hands/leftpaw(T)
 		new /obj/effect/temp_visual/bubblegum_hands/leftthumb(T)
 	SLEEP_CHECK_DEATH(6, src)
+	/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 	for(var/mob/living/L in T)
 		if(!faction_check_mob(L))
 			if(L.stat != CONSCIOUS)
@@ -224,6 +225,7 @@ Difficulty: Hard
 				playsound(targetturf, 'sound/magic/exit_blood.ogg', 100, TRUE, -1)
 				addtimer(CALLBACK(src, .proc/devour, L), 2)
 	SLEEP_CHECK_DEATH(1, src)
+	*/ //ACULASTATION EDIT END
 
 
 

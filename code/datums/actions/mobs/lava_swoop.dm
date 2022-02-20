@@ -98,9 +98,11 @@
 	playsound(owner.loc, 'sound/effects/meteorimpact.ogg', 200, TRUE)
 	for(var/mob/living/L in orange(1, owner) - owner)
 		if(L.stat)
+		/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 			owner.visible_message(span_warning("[owner] slams down on [L], crushing [L.p_them()]!"))
 			L.gib()
 		else
+		*/ //ACULASTATION EDIT END
 			L.adjustBruteLoss(75)
 			if(L && !QDELETED(L)) // Some mobs are deleted on death
 				var/throw_dir = get_dir(owner, L)

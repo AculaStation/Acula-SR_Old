@@ -144,9 +144,11 @@
 		if (is_species(H, /datum/species/golem/sand))
 			. = TRUE
 
+/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 /mob/living/simple_animal/hostile/megafauna/colossus/devour(mob/living/L)
 	visible_message(span_colossus("[src] disintegrates [L]!"))
 	L.dust()
+*/ //ACULASTATION EDIT END
 
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"
@@ -184,11 +186,13 @@
 
 /obj/projectile/colossus/on_hit(atom/target, blocked = FALSE)
 	. = ..()
+	/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 	if(isliving(target))
 		var/mob/living/dust_mob = target
 		if(dust_mob.stat == DEAD)
 			dust_mob.dust()
 		return
+	*/ //ACULASTATION EDIT END
 	if(!explode_hit_objects || istype(target, /obj/vehicle/sealed))
 		return
 	if(isturf(target) || isobj(target))
