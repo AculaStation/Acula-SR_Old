@@ -129,6 +129,7 @@ Difficulty: Medium
 	if(QDELETED(target))
 		return
 	face_atom(target)
+	/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 	if(isliving(target))
 		var/mob/living/L = target
 		if(L.stat == DEAD)
@@ -141,6 +142,7 @@ Difficulty: Medium
 					adjustHealth(-(L.maxHealth * 0.5))
 			L.gib()
 			return TRUE
+		*/ //ACULASTATION EDIT END
 	changeNext_move(CLICK_CD_MELEE)
 	miner_saw.melee_attack_chain(src, target)
 	if(guidance)

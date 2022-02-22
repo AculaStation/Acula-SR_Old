@@ -13,7 +13,7 @@
 	weather_immunities = list(TRAIT_LAVA_IMMUNE,TRAIT_ASHSTORM_IMMUNE)
 	robust_searching = TRUE
 	ranged_ignores_vision = TRUE
-	stat_attack = DEAD
+	stat_attack = HARD_CRIT //ACULASTATION EDIT - Remove megafauna gibbing: This makes megafauna not attack corpses.
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
 	minbodytemp = 0
@@ -126,10 +126,12 @@
 			if(!client && ranged && ranged_cooldown <= world.time)
 				OpenFire()
 
+		/* //ACULASTATION EDIT START - Remove megafauna gibbing.
 			if(L.health <= HEALTH_THRESHOLD_DEAD && HAS_TRAIT(L, TRAIT_NODEATH)) //Nope, it still gibs yall
 				devour(L)
 		else
 			devour(L)
+		*/ //ACULASTATION EDIT END
 
 /// Devours a target and restores health to the megafauna
 /mob/living/simple_animal/hostile/megafauna/proc/devour(mob/living/L)
