@@ -5378,4 +5378,6 @@
 #include "z__modular_aculastation\modules\no_horny\helper_procs.dm"
 #include "z__modular_aculastation\modules\no_horny\qdel_horny.dm"
 #include "z__modular_aculastation\modules\no_horny\z_axis.dm"
+#include "z__modular_aculastation\modules\weapons\magfab\magazines.dm"
+#include "z__modular_aculastation\modules\weapons\magfab\weapon_designs.dm"
 // END_INCLUDE
