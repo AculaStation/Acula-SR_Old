@@ -28,6 +28,15 @@
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/rcmakarovmag
+	name = "Empty R-C Makarov Magazine (10mm)"
+	id = "rcmakarovmag"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 3000)
+	build_path = /obj/item/ammo_box/magazine/multi_sprite/makarov/empty
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/wt550mag
 	name = "Empty WT-550 Magazine (4.6x30mm)"
 	id = "wt550mag"
@@ -45,6 +54,7 @@
 	design_ids = list(
 		"croonmag",
 		"pepperballmag",
+		"rcmakarovmag",
 		"wildcatmag",
 		"wt550mag",
 	)
