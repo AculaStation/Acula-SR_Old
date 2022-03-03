@@ -14,5 +14,3 @@
 
 /obj/item/ammo_box/magazine/wt550m9/empty //Magazine for the WT-550/security auto rifle.
     start_empty = TRUE
-
-
