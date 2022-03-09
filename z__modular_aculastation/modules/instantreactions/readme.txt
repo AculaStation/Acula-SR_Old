@@ -1,0 +1,1 @@
+Does what it says on the tin. Turns almost all chemical reactions into instantenous ones, bypassing the fermichem system of gradual reactions and purity.
