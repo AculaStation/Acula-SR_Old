@@ -100,11 +100,15 @@
 #define HIDEHEADGEAR (1<<11)
 ///for lizard snouts, because some HIDEFACE clothes don't actually conceal that portion of the head.
 #define HIDESNOUT (1<<12)
-///SKYRAT EDIT ADDITION: CUSTOM EAR TOGGLE FOR ANTHRO/ETC EAR SHOWING - Manually set this on items you want anthro ears to show on!
+///hides mutant/moth wings, does not apply to functional wings
+#define HIDEMUTWINGS (1<<13)
+
+//SKYRAT EDIT ADDITION: CUSTOM EAR TOGGLE FOR ANTHRO/ETC EAR SHOWING -
+/// Manually set this on items you want anthro ears to show on!
 #define SHOWSPRITEEARS (1<<13)
 /// Does this sprite also hide the spine on tails? Realistically only useful for the clothes that have a special tail overlay, like MODsuits
 #define HIDESPINE (1<<14)
-//SKYRAT EDIT ADDITION BEGIN - ERP UPDATE
+/// Does this sprite hide devious devices?
 #define HIDESEXTOY (1<<15)
 //SKYRAT EDIT ADDITION END
 
@@ -132,9 +136,14 @@
 #define RIGHT_HANDS 2
 
 //flags for female outfits: How much the game can safely "take off" the uniform without it looking weird
+/// For when there's simply no need for a female version of this uniform.
 #define NO_FEMALE_UNIFORM 0
-#define FEMALE_UNIFORM_FULL 1
-#define FEMALE_UNIFORM_TOP 2
+/// For the game to take off everything, disregards other flags.
+#define FEMALE_UNIFORM_FULL (1<<0)
+/// For when you really need to avoid the game cutting off that one pixel between the legs, to avoid the comeback of the infamous "dixel".
+#define FEMALE_UNIFORM_TOP_ONLY (1<<1)
+/// For when you don't want the "breast" effect to be applied (the one that cuts two pixels in the middle of the front of the uniform when facing east or west).
+#define FEMALE_UNIFORM_NO_BREASTS (1<<2)
 
 //flags for alternate styles: These are hard sprited so don't set this if you didn't put the effort in
 #define NORMAL_STYLE 0

@@ -64,6 +64,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 		H.remove_overlay(BODY_BEHIND_LAYER)
 		H.remove_overlay(BODY_ADJ_LAYER)
 		H.remove_overlay(BODY_FRONT_LAYER)
+		H.remove_overlay(BODY_FRONT_UNDER_CLOTHES)
 		return
 
 	var/list/bodyparts_to_add = list()
@@ -92,6 +93,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	H.remove_overlay(BODY_BEHIND_LAYER)
 	H.remove_overlay(BODY_ADJ_LAYER)
 	H.remove_overlay(BODY_FRONT_LAYER)
+	H.remove_overlay(BODY_FRONT_UNDER_CLOTHES)
 
 	var/g = (H.body_type == FEMALE) ? "f" : "m"
 	for(var/bodypart in bodyparts_to_add)
@@ -277,6 +279,7 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	H.apply_overlay(BODY_BEHIND_LAYER)
 	H.apply_overlay(BODY_ADJ_LAYER)
 	H.apply_overlay(BODY_FRONT_LAYER)
+	H.apply_overlay(BODY_FRONT_UNDER_CLOTHES)
 
 /datum/species
 	///What accessories can a species have aswell as their default accessory of such type e.g. "frills" = "Aquatic". Default accessory colors is dictated by the accessory properties and mutcolors of the specie
@@ -301,10 +304,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	mutant_bodyparts = list()
 	default_mutant_bodyparts = list("tail" = "Cat", "ears" = "Cat")
 	learnable_languages = list(/datum/language/common, /datum/language/nekomimetic)
-
-/datum/species/human/monkey
-	mutant_bodyparts = list()
-	default_mutant_bodyparts = list("tail" = "Monkey")
 
 /datum/species/human
 	mutant_bodyparts = list()
