@@ -6532,8 +6532,6 @@
 /area/command/heads_quarters/rd)
 "bBK" = (
 /obj/structure/table/abductor,
-/obj/item/clothing/sextoy/magic_wand,
-/obj/item/clothing/mask/leatherwhip,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
@@ -34909,8 +34907,6 @@
 /area/security/checkpoint/medical)
 "mdu" = (
 /obj/structure/table/abductor,
-/obj/item/lustwish_discount,
-/obj/item/clothing/sextoy/vibroring,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "mdw" = (
@@ -35296,13 +35292,6 @@
 /area/commons/dorms)
 "mmo" = (
 /obj/structure/table/abductor,
-/obj/item/clothing/sextoy/dildo{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/clothing/sextoy/buttplug{
-	pixel_y = 4
-	},
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "mmr" = (
@@ -66713,8 +66702,6 @@
 	dir = 4
 	},
 /obj/structure/table/abductor,
-/obj/item/clothing/sextoy/dildo/double_dildo,
-/obj/item/spanking_pad,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 6
 	},
