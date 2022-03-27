@@ -237,8 +237,10 @@
 		for(var/t in patient.get_traumas())
 			var/datum/brain_trauma/trauma = t
 			//SKYRAT EDIT: Scary Traits (Bimbo)
+			/* //ACULASTATION EDIT START - March 2022 Update
 			if(!trauma.display_scanner)
 				continue
+			*/ //ACULASTATION EDIT END
 			//SKYRAT EDIT: Scary Traits (Bimbo)
 			var/trauma_desc = ""
 			switch(trauma.resilience)

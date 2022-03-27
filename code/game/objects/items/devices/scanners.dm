@@ -249,8 +249,10 @@ GENE SCANNER
 			var/list/trauma_text = list()
 			for(var/datum/brain_trauma/trauma in carbontarget.get_traumas())
 				//SKYRAT EDIT: Scary Traits (Bimbo)
+				/* //ACULASTATION EDIT START - March 2022 Update
 				if(!trauma.display_scanner)
 					continue
+				*/ //ACULASTATION EDIT END
 				//SKYRAT EDIT: Scary Traits (Bimbo)
 				var/trauma_desc = ""
 				switch(trauma.resilience)
