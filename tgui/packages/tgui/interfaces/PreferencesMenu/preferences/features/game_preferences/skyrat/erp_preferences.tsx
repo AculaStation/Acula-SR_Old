@@ -28,7 +28,7 @@ export const cum_face_pref: FeatureToggle = {
 export const bimbofication_pref: FeatureToggle = {
   name: "Bimbofication",
   category: "ERP",
-  description: "Toggles if you are able to react to the effects of bimbofication.",
+  description: "",
   component: CheckboxInput,
 };
 
