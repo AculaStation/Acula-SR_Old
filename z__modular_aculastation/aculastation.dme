@@ -1,0 +1,22 @@
+// DM Environment file for Aculastation.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+#include "modules\equalpay\species_paydays.dm"
+#include "modules\insultweak\color.dm"
+#include "modules\no_horny\feather.dm"
+#include "modules\no_horny\helper_procs.dm"
+#include "modules\no_horny\qdel_horny.dm"
+#include "modules\no_horny\z_axis.dm"
+// BEGIN_INCLUDE
+// END_INCLUDE
+

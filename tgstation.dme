@@ -5376,8 +5376,5 @@
 #include "modular_skyrat\modules\xenoarch\code\modules\research\xenoarch\xenoarch_tool.dm"
 #include "z__modular_aculastation\modules\equalpay\species_paydays.dm"
 #include "z__modular_aculastation\modules\insultweak\color.dm"
-#include "z__modular_aculastation\modules\no_horny\feather.dm"
-#include "z__modular_aculastation\modules\no_horny\helper_procs.dm"
-#include "z__modular_aculastation\modules\no_horny\qdel_horny.dm"
-#include "z__modular_aculastation\modules\no_horny\z_axis.dm"
+#include "z__modular_aculastation\aculastation.dme"
 // END_INCLUDE
