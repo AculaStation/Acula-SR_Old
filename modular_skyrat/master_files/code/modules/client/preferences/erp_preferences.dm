@@ -1,3 +1,4 @@
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/config_entry/flag/disable_erp_preferences
 	default = FALSE
 
@@ -226,3 +227,4 @@
 
 /datum/preference/choiced/erp_sexuality/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return FALSE
+*/ //ACULASTATION EDIT END
