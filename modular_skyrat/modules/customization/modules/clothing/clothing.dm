@@ -7,14 +7,19 @@
 	var/greyscale_config_worn_digi
 	/// Icon file for mob worn overlays, if the user is a vox.
 	var/icon/worn_icon_vox
+	/// Icon file for mob worn overlays, if the user is a teshari.
+	var/icon/worn_icon_teshari
 	/// The config type to use for greyscaled worn sprites for vox characters. Both this and greyscale_colors must be assigned to work.
 	var/greyscale_config_worn_vox
 
-/obj/item/clothing
 	var/worn_icon_taur_snake
 	var/worn_icon_taur_paw
 	var/worn_icon_taur_hoof
 	var/worn_icon_muzzled
+
+	var/greyscale_config_worn_taur_snake
+	var/greyscale_config_worn_taur_paw
+	var/greyscale_config_worn_taur_hoof
 
 /obj/item/clothing/head
 	mutant_variants = STYLE_MUZZLE | STYLE_VOX
@@ -152,9 +157,6 @@
 	mutant_variants = NONE
 
 /obj/item/clothing/under/rank/medical/doctor/skirt
-	mutant_variants = NONE
-
-/obj/item/clothing/under/rank/medical/chemist
 	mutant_variants = NONE
 
 /obj/item/clothing/under/rank/medical/paramedic/skirt
