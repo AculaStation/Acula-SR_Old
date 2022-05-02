@@ -1,3 +1,4 @@
+/* //ACULASTATION EDIT START - HORNY REMOVAL
 /datum/config_entry/flag/disable_erp_preferences
 	default = FALSE
 
@@ -55,6 +56,9 @@
 
 /datum/preference/toggle/erp/sex_toy
 	savefile_key = "sextoy_pref"
+
+/datum/preference/toggle/erp/bimbofication
+	savefile_key = "bimbofication_pref"
 
 /datum/preference/toggle/erp/aphro
 	savefile_key = "aphro_pref"
@@ -223,3 +227,4 @@
 
 /datum/preference/choiced/erp_sexuality/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return FALSE
+*/ //ACULASTATION EDIT END
