@@ -18,6 +18,10 @@
 	opposing_force_equipment = null
 	return ..()
 
+/// Called when the gear is issued, use for unique services (e.g. a power outage) that don't have an item
+/datum/opposing_force_equipment/proc/on_issue(mob/living/target)
+	return
+
 /datum/opposing_force_objective
 	/// The name of the objective
 	var/title = ""
@@ -69,6 +73,10 @@
 	var/admin_requested_changes = ""
 	/// The ckey of the person that made this application
 	var/ckey
+	/// Contractor hub datum, used if the user OPFORs for a contractor kit
+	var/datum/contractor_hub/contractor_hub
+	/// Corresponding stat() click button
+	var/obj/effect/statclick/opfor_specific/stat_button
 
 	COOLDOWN_DECLARE(static/request_update_cooldown)
 	COOLDOWN_DECLARE(static/ping_cooldown)
@@ -77,6 +85,8 @@
 	src.mind_reference = mind_reference
 	ckey = ckey(mind_reference.key)
 	send_system_message("[ckey] created the application")
+	stat_button = new()
+	stat_button.opfor = src
 
 /datum/opposing_force/Destroy(force)
 	mind_reference.opposing_force = null
@@ -85,6 +95,7 @@
 	QDEL_LIST(objectives)
 	QDEL_LIST(admin_chat)
 	QDEL_LIST(modification_log)
+	QDEL_NULL(stat_button)
 	return ..()
 
 /datum/opposing_force/Topic(href, list/href_list)
@@ -186,6 +197,7 @@
 				"name" = opfor_equipment.name,
 				"description" = opfor_equipment.description,
 				"equipment_category" = opfor_equipment.category,
+				"admin_note" = opfor_equipment.admin_note,
 			))
 		data["equipment_list"] += list(list(
 			"category" = equipment_category,
@@ -204,6 +216,7 @@
 			"reason" = equipment.reason,
 			"denied_reason" = equipment.denied_reason,
 			"count" = equipment.count,
+			"admin_note" = equipment.opposing_force_equipment.admin_note,
 			)
 		data["selected_equipment"] += list(equipment_data)
 
@@ -345,7 +358,7 @@
 	user.client?.admin_follow(mind_reference.current)
 
 /datum/opposing_force/proc/set_equipment_count(mob/user, datum/opposing_force_selected_equipment/equipment, new_count)
-	var/sanitized_newcount = sanitize_integer(new_count, 1, OPFOR_EQUIPMENT_COUNT_LIMIT)
+	var/sanitized_newcount = sanitize_integer(new_count, 1, equipment.opposing_force_equipment.max_amount)
 	equipment.count = new_count
 	add_log(user.ckey, "Set equipment '[equipment.opposing_force_equipment.name] count to [sanitized_newcount]")
 
@@ -432,7 +445,10 @@
 		if(iterating_equipment.status != OPFOR_EQUIPMENT_STATUS_APPROVED)
 			continue
 		for(var/i in 1 to iterating_equipment.count)
-			new iterating_equipment.opposing_force_equipment.item_type(spawned_box)
+			if(!(iterating_equipment.opposing_force_equipment.item_type == /obj/effect/gibspawner/generic)) // This is what's used in place of an item in uplinks, so it's the same here
+				new iterating_equipment.opposing_force_equipment.item_type(spawned_box)
+			iterating_equipment.opposing_force_equipment.on_issue(target)
+
 	if(ishuman(target))
 		var/mob/living/carbon/human/human = target
 		human.put_in_hands(spawned_box)
@@ -840,4 +856,43 @@
 			report += "</b>[opfor_equipment.opposing_force_equipment.name]<b><br>"
 			report += "<br>"
 
+	if(contractor_hub)
+		report += contractor_round_end()
+
 	return report.Join("\n")
+
+/datum/action/opfor
+	name = "Open Opposing Force Panel"
+	button_icon_state = "round_end"
+
+/datum/action/opfor/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
+	owner.opposing_force()
+
+/datum/action/opfor/IsAvailable()
+	if(!target)
+		return FALSE
+	. = ..()
+	if(!.)
+		return
+	return TRUE
+
+/obj/effect/statclick/opfor_specific
+	var/datum/opposing_force/opfor
+
+/obj/effect/statclick/opfor_specific/Destroy()
+	opfor = null
+	. = ..()
+
+/obj/effect/statclick/opfor_specific/Click()
+	if (!usr.client?.holder)
+		message_admins("[key_name_admin(usr)] non-holder clicked on an OPFOR statclick! ([src])")
+		log_game("[key_name(usr)] non-holder clicked on an OPFOR statclick! ([src])")
+		return
+
+	opfor.ui_interact(usr)
+
+/obj/effect/statclick/opfor_specific/proc/Action()
+	Click()

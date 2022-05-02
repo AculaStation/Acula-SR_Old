@@ -13,7 +13,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 3
 	throwforce = 5
-	hitsound = "swing_hit"
+	hitsound = SFX_SWING_HIT
 	usesound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')
 	drop_sound = 'sound/items/handling/weldingtool_drop.ogg'
 	pickup_sound = 'sound/items/handling/weldingtool_pickup.ogg'
@@ -100,11 +100,12 @@
 	user.visible_message(span_suicide("[user] welds [user.p_their()] every orifice closed! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (FIRELOSS)
 
+/obj/item/weldingtool/screwdriver_act(mob/living/user, obj/item/tool)
+	flamethrower_screwdriver(tool, user)
+	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/item/weldingtool/attackby(obj/item/tool, mob/user, params)
-	if(tool.tool_behaviour == TOOL_SCREWDRIVER)
-		flamethrower_screwdriver(tool, user)
-	else if(istype(tool, /obj/item/stack/rods))
+	if(istype(tool, /obj/item/stack/rods))
 		flamethrower_rods(tool, user)
 	else
 		. = ..()
@@ -126,8 +127,14 @@
 			if(user == attacked_humanoid)
 				user.visible_message(span_notice("[user] starts to fix some of the dents on [attacked_humanoid]'s [affecting.name]."),
 					span_notice("You start fixing some of the dents on [attacked_humanoid == user ? "your" : "[attacked_humanoid]'s"] [affecting.name]."))
+				/* SKYRAT EDIT START - ORIGINAL:
 				if(!do_mob(user, attacked_humanoid, 50))
 					return
+				*/
+			// SKYRAT EDIT CHANGE START
+			if(!do_after(user, (user == attacked_humanoid ? self_delay : other_delay)))
+				return
+			// SKYRAT EDIT CHANGE END
 			item_heal_robotic(attacked_humanoid, user, 15, 0)
 	else
 		return ..()
@@ -250,7 +257,7 @@
 
 	force = 3
 	damtype = BRUTE
-	hitsound = "swing_hit"
+	hitsound = SFX_SWING_HIT
 	update_appearance()
 
 
