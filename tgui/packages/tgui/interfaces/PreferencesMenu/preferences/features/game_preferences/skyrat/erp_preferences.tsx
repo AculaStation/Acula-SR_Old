@@ -28,21 +28,14 @@ export const cum_face_pref: FeatureToggle = {
 export const bimbofication_pref: FeatureToggle = {
   name: "Bimbofication",
   category: "ERP",
-  description: "",
+  description: "Toggles if you are able to react to the effects of bimbofication.",
   component: CheckboxInput,
 };
 
 export const aphro_pref: FeatureToggle = {
   name: "Aphrodisiacs",
   category: "ERP",
-  description: "",
-  component: CheckboxInput,
-};
-
-export const noncon_pref: FeatureToggle = {
-  name: "Obsessed Non-con Target",
-  category: "ERP",
-  description: "",
+  description: "Toggles whether you wish to recieve the effects of aphrodisiacs",
   component: CheckboxInput,
 };
 

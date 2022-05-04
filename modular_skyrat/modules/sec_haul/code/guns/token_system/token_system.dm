@@ -73,7 +73,6 @@
 	name = "sidearm armament holochip"
 	desc = "A holochip used in any armament vendor, this is for sidearms. Do not bend."
 	icon_state = "token_sidearm"
-	minimum_sec_level = SEC_LEVEL_BLUE
 
 /obj/item/armament_token/sidearm/get_available_gunsets()
 	return list(
@@ -108,7 +107,8 @@
 	name = "blackmarket armament holochip"
 	desc = "A holochip used in any armament vendor, this is for |bad people|. Do not bend."
 	icon_state = "token_blackmarket"
-	custom_premium_price = PAYCHECK_HARD * 3
+	custom_price = PAYCHECK_COMMAND * 10
+	custom_premium_price = PAYCHECK_COMMAND * 10
 
 /obj/item/armament_token/sidearm_blackmarket/get_available_gunsets()
 	return list(
@@ -178,7 +178,7 @@
 	name = "energy armament holochip"
 	desc = "A holochip used in any armament vendor, this is for energy weapons. Do not bend."
 	icon_state = "token_energy"
-	custom_premium_price = PAYCHECK_HARD * 3
+	custom_premium_price = PAYCHECK_CREW * 3
 	minimum_sec_level = SEC_LEVEL_AMBER
 
 /obj/item/armament_token/energy/get_available_gunsets()

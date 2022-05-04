@@ -54,21 +54,18 @@
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 	var/spellnum = 1
 	for(var/spell in construct_spells)
-		var/the_spell = new spell(null)
-		AddSpell(the_spell)
-		var/obj/effect/proc_holder/spell/S = mob_spell_list[spellnum]
 		var/pos = 2+spellnum*31
 		if(construct_spells.len >= 4)
 			pos -= 31*(construct_spells.len - 4)
-		S.action.button.screen_loc = "6:[pos],4:-2"
-		S.action.button.moved = "6:[pos],4:-2"
+		var/obj/effect/proc_holder/spell/the_spell = new spell(null)
+		the_spell?.action.default_button_position ="6:[pos],4:-2"
+		AddSpell(the_spell)
 		spellnum++
 	if(runetype)
-		our_rune = new runetype(src)
-		our_rune.Grant(src)
 		var/pos = 2+spellnum*31
-		our_rune.button.screen_loc = "6:[pos],4:-2"
-		our_rune.button.moved = "6:[pos],4:-2"
+		our_rune = new runetype(src)
+		our_rune.default_button_position = "6:[pos],4:-2" // Set the default position to this random position
+		our_rune.Grant(src)
 	if(icon_state)
 		add_overlay("glow_[icon_state]_[theme]")
 
@@ -93,7 +90,7 @@
 			text_span = "purple"
 		if(THEME_HOLY)
 			text_span = "blue"
-	. = list("<span class='[text_span]'>This is [icon2html(src, user)] \a <b>[src]</b>!\n[desc]<hr>") //SKYRAT EDIT CHANGE
+	. = list("<span class='[text_span]'>This is [icon2html(src, user)] \a <b>[src]</b>!\n[desc]", EXAMINE_SECTION_BREAK) //SKYRAT EDIT CHANGE
 	if(health < maxHealth)
 		if(health >= maxHealth/2)
 			. += span_warning("[t_He] look[t_s] slightly dented.")

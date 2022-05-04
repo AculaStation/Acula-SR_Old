@@ -47,6 +47,7 @@
 	var/custom_species_lore
 	var/obscured
 	var/ooc_notes = ""
+	var/headshot = ""
 
 	//  Handle OOC notes first
 	/* //ACULASTATION EDIT START - HORNY REMOVAL
@@ -69,6 +70,7 @@
 		custom_species = "Silicon"
 		custom_species_lore = "A cyborg unit."
 		ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
+		headshot += preferences.read_preference(/datum/preference/text/headshot)
 
 	if(ishuman(holder))
 		var/mob/living/carbon/human/holder_human = holder
@@ -77,6 +79,8 @@
 		flavor_text = obscured ? "Obscured" :  holder_human.dna.features["flavor_text"]
 		custom_species_lore = obscured ? "Obscured" : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features["ooc_notes"]
+		if(!obscured)
+			headshot += holder_human.dna.features["headshot"]
 
 	var/name = obscured ? "Unknown" : holder.name
 
@@ -87,4 +91,5 @@
 	data["ooc_notes"] = ooc_notes
 	data["custom_species"] = custom_species
 	data["custom_species_lore"] = custom_species_lore
+	data["headshot"] = headshot
 	return data

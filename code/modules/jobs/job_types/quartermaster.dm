@@ -18,7 +18,7 @@
 	outfit = /datum/outfit/job/quartermaster
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
-	paycheck = PAYCHECK_COMMAND //SKYRAT EDIT CHANGE - ORIGINAL: PAYCHECK_MEDIUM
+	paycheck = PAYCHECK_COMMAND //SKYRAT EDIT CHANGE - ORIGINAL: PAYCHECK_CREW
 	paycheck_department = ACCOUNT_CAR
 
 	//liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM) //ORIGINAL
@@ -53,7 +53,7 @@
 		/obj/item/melee/baton/telescopic=1,
 		/obj/item/modular_computer/tablet/preset/cargo/quartermaster = 1
 		) //SKYRAT EDIT CHANGE - ORIGINAL: backpack_contents = list(/obj/item/modular_computer/tablet/preset/cargo/quartermaster = 1)
-	belt = /obj/item/pda/quartermaster
+	belt = /obj/item/modular_computer/tablet/pda/quartermaster
 	ears = /obj/item/radio/headset/heads/qm //SKYRAT EDIT CHANGE - OIGINAL: ears = /obj/item/radio/headset/headset_cargo
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/sneakers/brown

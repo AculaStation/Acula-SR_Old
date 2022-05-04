@@ -13,7 +13,7 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 
-	paycheck = PAYCHECK_HARD
+	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SEC
 
 	outfit = /datum/outfit/job/brigoff
@@ -62,7 +62,7 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
 	head = /obj/item/clothing/head/brigoff
 	box = /obj/item/storage/box/survival/security
-	belt = /obj/item/pda/security
+	belt = /obj/item/modular_computer/tablet/pda/security
 
 	id_trim = /datum/id_trim/job/brigoff
 

@@ -17,6 +17,7 @@
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mutant_bodyparts = list()
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	default_mutant_bodyparts = list(
 		"tail" = "None",
 		"snout" = "None",
@@ -28,4 +29,10 @@
 	)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 0.75
-	limbs_id = SPECIES_HUMAN
+	examine_limb_id = SPECIES_HUMAN
+
+/datum/species/humanoid/get_species_description()
+	return "This is a template species for your own creations!"
+
+/datum/species/humanoid/get_species_lore()
+	return list("Make sure you fill out your own custom species lore!")

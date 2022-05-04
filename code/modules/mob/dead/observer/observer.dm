@@ -373,7 +373,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!mind || QDELETED(mind.current))
 		to_chat(src, span_warning("You have no body."))
 		return
-	if(!can_reenter_corpse)
+	if(!can_reenter_corpse && !mind.has_antag_datum(/datum/antagonist/changeling)) //SKYRAT EDIT
 		to_chat(src, span_warning("You cannot re-enter your body."))
 		return
 	if(mind.current.key && mind.current.key[1] != "@") //makes sure we don't accidentally kick any clients
@@ -838,6 +838,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return isAdminGhostAI(usr)
 
 /mob/dead/observer/is_literate()
+	return TRUE
+
+/mob/dead/observer/can_read(obj/O)
 	return TRUE
 
 /mob/dead/observer/vv_edit_var(var_name, var_value)

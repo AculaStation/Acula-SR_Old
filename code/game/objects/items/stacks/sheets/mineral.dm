@@ -487,6 +487,7 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 	resistance_flags = FIRE_PROOF | LAVA_PROOF | ACID_PROOF | INDESTRUCTIBLE
 	point_value = 100
 	mats_per_unit = list(/datum/material/metalhydrogen = MINERAL_MATERIAL_AMOUNT)
+	material_type = /datum/material/metalhydrogen
 	merge_type = /obj/item/stack/sheet/mineral/metal_hydrogen
 
 /obj/item/stack/sheet/mineral/metal_hydrogen/get_main_recipes()

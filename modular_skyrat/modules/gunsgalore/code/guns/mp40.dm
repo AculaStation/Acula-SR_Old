@@ -21,13 +21,14 @@
 	eject_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/smg_magout.ogg'
 	alt_icons = TRUE
 	realistic = TRUE
+	company_flag = COMPANY_OLDARMS
 
 /obj/item/ammo_box/magazine/mp40
 	name = "mp40 magazine (9mmx19)"
 	icon = 'modular_skyrat/modules/gunsgalore/icons/guns/gunsgalore_items.dmi'
 	icon_state = "mp40"
 	ammo_type = /obj/item/ammo_casing/c9mm
-	caliber = "c9mm"
+	caliber = CALIBER_9MM
 	max_ammo = 32
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 

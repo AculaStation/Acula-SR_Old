@@ -365,57 +365,6 @@ HEATSINK ATTACHMENT
 	. = ..()
 	microfusion_gun.heat_dissipation_bonus -= cooling_rate_increase
 
-/*
-UNDERCHARGER ATTACHMENT
-
-Massively decreases the output beam of the phase emitter.
-Converts shots to STAMINA damage.
-*/
-/obj/item/microfusion_gun_attachment/undercharger
-	name = "phase emitter undercharger"
-	desc = "An underbarrel system hooked to the phase emitter, this allows the weapon to also fire an electron bolt, producing a short-lived underpowered electric charge capable of stunning targets. These shots are less demanding on the weapon, leading to an increase in cooling rate."
-	icon_state = "attachment_undercharger"
-	attachment_overlay_icon_state = "attachment_undercharger"
-	incompatable_attachments = list(/obj/item/microfusion_gun_attachment/scatter, /obj/item/microfusion_gun_attachment/scattermax, /obj/item/microfusion_gun_attachment/honk)
-	slot = GUN_SLOT_UNDERBARREL
-	var/toggle = FALSE
-	var/cooling_rate_increase = 10
-	/// The projectile we override
-	var/projectile_override = /obj/projectile/beam/microfusion_disabler
-
-/obj/item/microfusion_gun_attachment/undercharger/get_modify_data()
-	return list(list("title" = "Turn [toggle ? "OFF" : "ON"]", "icon" = "power-off", "color" = "[toggle ? "red" : "green"]", "reference" = "toggle_on_off"))
-
-/obj/item/microfusion_gun_attachment/undercharger/run_modify_data(params, mob/living/user, obj/item/gun/microfusion/microfusion_gun)
-	if(params == "toggle_on_off")
-		toggle(microfusion_gun, user)
-
-/obj/item/microfusion_gun_attachment/undercharger/proc/toggle(obj/item/gun/microfusion/microfusion_gun, mob/user)
-	if(toggle)
-		toggle = FALSE
-		microfusion_gun.heat_dissipation_bonus += cooling_rate_increase
-	else
-		toggle = TRUE
-		microfusion_gun.heat_dissipation_bonus -= cooling_rate_increase
-
-	if(user)
-		to_chat(user, span_notice("You toggle [src] [toggle ? "ON" : "OFF"]."))
-
-/obj/item/microfusion_gun_attachment/undercharger/run_attachment(obj/item/gun/microfusion/microfusion_gun)
-	. = ..()
-	microfusion_gun.fire_sound = 'modular_skyrat/modules/microfusion/sound/burn.ogg'
-
-/obj/item/microfusion_gun_attachment/undercharger/process_fire(obj/item/gun/microfusion/microfusion_gun, obj/item/ammo_casing/chambered)
-	. = ..()
-	if(toggle)
-		chambered.loaded_projectile = new projectile_override
-
-/obj/item/microfusion_gun_attachment/undercharger/remove_attachment(obj/item/gun/microfusion/microfusion_gun)
-	. = ..()
-	if(toggle)
-		toggle = FALSE
-		microfusion_gun.heat_dissipation_bonus += cooling_rate_increase
-	microfusion_gun.fire_sound = microfusion_gun.chambered?.fire_sound
 
 /*
 RGB ATTACHMENT
@@ -499,18 +448,16 @@ DANGER: SNOWFLAKE ZONE
 
 /obj/item/microfusion_gun_attachment/scope/run_attachment(obj/item/gun/microfusion/microfusion_gun)
 	. = ..()
-	if(microfusion_gun.azoom)
+	if(microfusion_gun.GetComponent(/datum/component/scope))
 		return
-
-	microfusion_gun.azoom = new()
-	microfusion_gun.azoom.gun = microfusion_gun
+	microfusion_gun.AddComponent(/datum/component/scope, range_modifier = 1.5)
 	microfusion_gun.update_action_buttons()
 
 /obj/item/microfusion_gun_attachment/scope/remove_attachment(obj/item/gun/microfusion/microfusion_gun)
 	. = ..()
-	if(microfusion_gun.azoom)
-		microfusion_gun.azoom.Remove(microfusion_gun.azoom.owner)
-		QDEL_NULL(microfusion_gun.azoom)
+	var/datum/component_datum = microfusion_gun.GetComponent(/datum/component/scope)
+	if(component_datum)
+		qdel(component_datum)
 	microfusion_gun.update_action_buttons()
 
 /*
@@ -626,7 +573,7 @@ HONK!! Does subpar stamina damage but slips people.
 	name = "bananium phase emitter upgrade"
 	desc = "An honksperimental barrel attachment that makes your lasers funnier."
 	icon_state = "attachment_honk"
-	incompatable_attachments = list(/obj/item/microfusion_gun_attachment/scatter, /obj/item/microfusion_gun_attachment/scattermax, /obj/item/microfusion_gun_attachment/undercharger)
+	incompatable_attachments = list(/obj/item/microfusion_gun_attachment/scatter, /obj/item/microfusion_gun_attachment/scattermax)
 	slot = GUN_SLOT_BARREL
 	attachment_overlay_icon_state = "attachment_honk"
 	var/added_fire_delay = 20
@@ -652,7 +599,7 @@ HONK!! Does subpar stamina damage but slips people.
 	chambered.loaded_projectile.light_color = COLOR_VIVID_YELLOW
 	chambered.loaded_projectile.damage_type = STAMINA
 	chambered.loaded_projectile.damage = 20
-	chambered.loaded_projectile.flag = ENERGY
+	chambered.loaded_projectile.armor_flag = ENERGY
 	chambered.loaded_projectile.AddComponent(/datum/component/slippery, 20)
 	chambered.loaded_projectile.hitsound = 'sound/misc/slip.ogg'
 	chambered.loaded_projectile.impact_type = /obj/effect/projectile/impact/disabler

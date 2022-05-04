@@ -8,6 +8,7 @@
 	inhand_icon_state = "akm"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/akm
 	can_suppress = FALSE
 	burst_size = 3
@@ -20,7 +21,8 @@
 	load_empty_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/ltrifle_magin.ogg'
 	eject_sound = 'modular_skyrat/modules/gunsgalore/sound/guns/interact/ltrifle_magout.ogg'
 	alt_icons = TRUE
-	realistic = TRUE
+	dirt_modifier = 0.75
+	company_flag = COMPANY_IZHEVSK
 
 /obj/item/ammo_box/magazine/akm
 	name = "\improper AKM magazine"
